@@ -91,3 +91,5 @@ ENV/
 
 *.db
 venv/
+zappa_settings.json
+*.zip

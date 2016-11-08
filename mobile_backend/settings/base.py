@@ -1,10 +1,9 @@
 import os
 gettext = lambda s: s
-DATA_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_DIR = os.path.dirname(os.path.join('..', os.path.dirname(__file__)))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.dirname(os.path.join('..', os.path.dirname(os.path.abspath(__file__))))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'c2$f9=w6rh=jo-2v7zv)mqqb#lf2%)v29nl8el0+gyfl#*8g-^'
@@ -23,15 +22,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'mobile_backend', 'static'),
-)
+STATICFILES_DIRS = ()
 SITE_ID = 1
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'mobile_backend', 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',

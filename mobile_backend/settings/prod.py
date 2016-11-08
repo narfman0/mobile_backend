@@ -1,4 +1,1 @@
-from .base import *
-
-
-DEBUG = False
+from .staging import *

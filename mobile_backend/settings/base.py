@@ -6,7 +6,7 @@ DATA_DIR = os.path.dirname(os.path.join('..', os.path.dirname(__file__)))
 BASE_DIR = os.path.dirname(os.path.join('..', os.path.dirname(os.path.abspath(__file__))))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'c2$f9=w6rh=jo-2v7zv)mqqb#lf2%)v29nl8el0+gyfl#*8g-^'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", 'c2$f9=w6rh=jo-2v7zv)mqqb#lf2%)v29nl8el0+gyfl#*8g-^')
 
 ALLOWED_HOSTS = ['*',]
 ROOT_URLCONF = 'mobile_backend.urls'

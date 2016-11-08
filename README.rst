@@ -14,7 +14,7 @@ Usage
 #. Run dev server `./manage.py runserver`
 #. Note: for staging/prod, add the `--settings` arg like: `./manage.py createsuperuser --settings mobile_backend.settings.staging`
 #. Navigate in browser to `localhost:8000` log in etc. Maybe navigate to `localhost:8000/api` Congrats!
-#. Update the setting for SECRET_KEY! This is in `mobile_backend/settings/base.py`
+#. Update the setting for SECRET_KEY! This is in `mobile_backend/settings/base.py`. Alternatively you could set DJANGO_SECRET_KEY
 #. After making it your own^tm, deploy via zappa. This config is not version controlled! Do not commit it :)::
 
     zappa init
@@ -28,6 +28,7 @@ Some settings folks would probably want to change in environment variables/zappa
     "AWS_ACCESS_KEY_ID": "key_id",
     "AWS_SECRET_ACCESS_KEY": "secret_key",
     "AWS_STORAGE_BUCKET_NAME": "mobile-backend-bucket",
+    "DJANGO_SECRET_KEY": "newly gen'd key",
     "DATABASE_NAME": "mobile_backend",
     "DATABASE_USER": "mobile_backend_user",
     "DATABASE_PASS": "mobile_backend_pass",
